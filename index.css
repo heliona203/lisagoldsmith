@@ -3,7 +3,7 @@ body {
 }
 #viewport{
   width: 100vw; /* Viewport width */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #container {
   --button-width: 20vw;
@@ -14,7 +14,6 @@ body {
   display: flex;
   align-self: flex-start;
   transition: transform 1s ease;
-  padding-bottom: 10vw;
 }
 .slide {
   transform: translateX(-100vw);
@@ -25,6 +24,8 @@ body {
   width: calc(10vw + var(--page-width) + var(--button-width));
   /* float: left; */
   display: flex;
+  align-self: flex-start;
+  padding-bottom: 10vw;
 }
 .page {
   --button-width: 20vw;
@@ -32,6 +33,7 @@ body {
   /* padding-right: 20vw; */
   /* margin-right: 384px; */
   display: flex;
+  align-self: flex-start;
   /* overflow: auto; */
   min-height: 100vh;
   align-items: flex-start;
