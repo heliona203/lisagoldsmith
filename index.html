@@ -43,32 +43,161 @@
   <body>
     <link rel="stylesheet" href="./style.css" />
     <div>
-      <link href="./home11.css" rel="stylesheet" />
+      <link href="./index.css" rel="stylesheet" />
+      <div id="viewport">
+        <div id="container">
+          <div class="subcontainer" id="leftSide">
+            <div class="page" id="homepage">
+              <div class="section">
+                <h1 class="title">Lisa Goldsmith</h1>
+                <h1 class="subtitle">Home Organizer</h1>
+              </div>
+              <div class="section">
+                <h1 class="heading">ABOUT</h1>
+                <p class="body-text">
+                  I offer of range of services to help individuals or families
+                  declutter, sort, organize, decorate, categorize items, and optimize
+                  their living spaces. I can give advice in organizing your home and its
+                  rooms, such as kids’ bedrooms, kitchens, bathrooms, and home
+                  offices, as well as storage spaces like cabinets and closets. I’m good
+                  at creating systems to manage your belongings more efficiently,
+                  maximize space utilization, and create a more functional and
+                  aesthetically pleasing environment within the home. I also provide
+                  guidance on organization strategies tailored to the client’s
+                  needs and preferences and work closely with clients to understand
+                  their specific challenges and goals, offering personalized solutions to
+                  create spaces that are easier to maintain and enjoy.
+                </p>
+                <h1 class="heading">EXPERIENCE</h1>
+                <h4 class="subheading">Commercial Set Decorator | Assistant Set Decorator & Buyer</h4>
+              </div>
 
-      <div class="home11-container">
-        <h1 class="home11-text">Lisa Goldsmith</h1>
-        <h1 class="home11-text1">Home Organizer</h1>
-        <h1 class="home11-text2">ABOUT</h1>
-        <span class="home11-text3">
-          I offer of range of services to help individuals or families
-          declutter, sort, organize,decorate, categorize items, and optimize
-          their living spaces. I can give advice inorganizing your home and its
-          rooms, such as kids&amp;#39; bedrooms, kitchens, bathrooms, andhome
-          offices, as well as storage spaces like cabinets and closets.I’m good
-          at creating systems to manage your belongings more efficiently,
-          maximizespace utilization, and create a more functional and
-          aesthetically pleasing environmentwithin the home. I also provide
-          guidance on organization strategies tailored to theclient&amp;#39;s
-          needs and preferences and work closely with clients to understand
-          their specificchallenges and goals, offering personalized solutions to
-          create spaces that are easier tomaintain and enjoy.
-        </span>
-        <h1 class="home11-text4">EXPERIENCE</h1>
-        <h3 class="home11-text5">
-          Commercial Set Decorator | Assistant Set Decorator &amp;amp; Buyer
-        </h3>
-        <button type="button" class="home11-button button">Button</button>
+            </div>
+            <div><button type="button" id="pricing" onclick="slideLeft()"></button></div>
+          </div>
+          <div class="subcontainer" id="rightSide">
+            <div><button type="button" id="back" onclick="slideRight()"></button></div>
+            <div class="page">
+              <div class="section2">
+                <!-- <h3 class="subheading">Room or Area</h3> -->
+                <h2>Pricing</h2>
+                <table>
+                  <tr>
+                    <th>Room or Area</th>
+                    <th>Flat fee</th>
+                  </tr>
+                  <tr>
+                    <td>Closet</td>
+                    <td>$150 – $250</td>
+                  </tr>
+                  <tr>
+                    <td>Standard room</td>
+                    <td>$200 – $300</td>
+                  </tr>
+                  <tr>
+                    <td>Swimming pool area</td>
+                    <td>$200 – $300</td>
+                  </tr>
+                  <tr>
+                    <td>Backyard and garden</td>
+                    <td>$200 – $300</td>
+                  </tr>
+                  <tr>
+                    <td>Kitchen</td>
+                    <td>$250 – $400</td>
+                  </tr>
+                  <tr>
+                    <td>Office</td>
+                    <td>$250 – $400</td>
+                  </tr>
+                  <tr>
+                    <td>Garage</td>
+                    <td>$1,000 – $2,500</td>
+                  </tr>
+                  <tr>
+                    <td>Whole house</td>
+                    <td>$1,500 – $5,000</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="section2">
+                <table>
+                  <tr>
+                    <th>Organization Project Type</th>
+                    <th>Flat fee</th>
+                  </tr>
+                  <tr>
+                    <td>General home decluttering</td>
+                    <td>$50 – $120</td>
+                  </tr>
+                  <tr>
+                    <td>Office organization</td>
+                    <td>$50 – $90</td>
+                  </tr>
+                  <tr>
+                    <td>Business organization</td>
+                    <td>$50 – $150</td>
+                  </tr>
+                  <tr>
+                    <td>Life organization</td>
+                    <td>$50 – $200</td>
+                  </tr>
+                  <tr>
+                    <td>Computer organization</td>
+                    <td>$60 – $150</td>
+                  </tr>
+                  <tr>
+                    <td>Organization for hoarders</td>
+                    <td>$150 – $300</td>
+                  </tr>
+                  <tr>
+                    <td>Home financial organization</td>
+                    <td>$200 – $400</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-text" id="pricing-text">Pricing<br />→</div>
+      <div class="button-text" id="back-text">Back<br />←</div>
+      <div id="contact"><button type="button" id="contact-button" onclick="togglePopup()"></button><img src="icons8-contact-64.png" alt="contact"></div>
+      <div id="contactInfo">
+        <p>Local 44/52</p>
+        <p><b>EMAIL</b> lisa.goldsmith11@gmail.com</p>
+        <p><b>PHONE</b> 323 420 5390</p>
       </div>
     </div>
   </body>
+  <script>
+    function slideLeft() {
+      document.querySelector('#container').classList.toggle('slide');
+      document.querySelector('#pricing-text').classList.toggle('slide');
+      document.querySelector('#back-text').classList.toggle('slide');
+
+      const rightSide = document.getElementById('rightSide');
+      document.querySelector('.viewport').style.height = `${rightSide.offsetHeight}px`; // Adjust the viewport height to the right side
+
+      window.scrollTo(0, 0);
+    }
+    function slideRight() {
+      document.querySelector('#container').classList.toggle('slide');
+      document.querySelector('#pricing-text').classList.toggle('slide');
+      document.querySelector('#back-text').classList.toggle('slide');
+
+      const leftSide = document.getElementById('leftSide');
+      document.querySelector('.viewport').style.height = `${leftSide.offsetHeight}px`; // Adjust the viewport height to the left side
+
+      window.scrollTo(0, 0);
+    }
+    function togglePopup() {
+      var popup = document.getElementById("contactInfo");
+      if (popup.style.display === "inline-block") {
+        popup.style.display = "none";
+      } else {
+        popup.style.display = "inline-block";
+      }
+    }
+    </script>
 </html>
