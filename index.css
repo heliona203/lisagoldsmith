@@ -3,7 +3,7 @@ body {
 }
 #viewport{
   width: 100vw; /* Viewport width */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #container {
   --button-width: 20vw;
@@ -14,6 +14,7 @@ body {
   display: flex;
   align-self: flex-start;
   transition: transform 1s ease;
+  padding-bottom: 10vw;
 }
 .slide {
   transform: translateX(-100vw);
@@ -67,7 +68,7 @@ body {
 #pricing {
   top: 0px;
   right: 0px;
-  height: 100%;
+  height: calc(10vw + 100%);
   /* position: fixed; */
   width: 20vw;
   opacity: 0.5;
@@ -85,7 +86,7 @@ body {
 #back {
   top: 0px;
   right: 0px;
-  height: 100%;
+  height: calc(10vw + 100%);
   /* position: fixed; */
   width: 20vw;
   /*  */
@@ -104,14 +105,15 @@ body {
 .button-text {
   position: fixed;
   top: 50%;
+  pointer-events: none;
 }
 #pricing-text{
-  right: 10vw;
+  right: 8vw;
   opacity: 0.5;
   transition: transform 1s ease;
 }
 #back-text{
-  left: 10vw;
+  left: 8vw;
   opacity: 0.5;
   margin-left: 100vw;
   transition: transform 1s ease;
@@ -149,8 +151,8 @@ img{
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  bottom: 30px;
-  right: 30px;
+  bottom: 3vw;
+  right: 3vw;
   position: fixed;
   box-sizing: border-box;
   /* border: 1px solid black; */
@@ -158,6 +160,7 @@ img{
   background-size: 0% 100%;
   background-image: linear-gradient(black, black);
   /* transition: all 0.5s linear; */
+  cursor:pointer;
 }
 #contact-button:hover {
   opacity: 0;
@@ -180,4 +183,58 @@ img{
 }
 b {
   font-size: 10px;
+}
+.media-type {
+  position: relative;
+  /* margin-top: 1vw; */
+  width: 100%;
+  height: 20vw;
+  /* border: 1px solid gray; */
+  overflow: hidden;
+  margin-top: 2vw;
+}
+#shorter{
+  width: 100%;
+  margin-top: 2vw;
+}
+.media-type.show {
+  height: auto;
+}
+.readmore {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-top: 15px;
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  color: #000000;
+  cursor: pointer;
+  /* border: 1px solid gray; */
+}
+.readmore-gradient {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 15px;
+  left: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  /* border: 1px solid gray; */
+}
+.readmore::before {
+  content: attr(data-more)
+}
+.media-type.show .readmore {
+  position: relative;
+  top: auto;
+  display: block;
+}
+.media-type.show .readmore-gradient {
+  display: none;
+}
+.media-type.show .readmore::before {
+  content: attr(data-less)
+}
+.jobs{
+  margin-top: 1vw;
 }
