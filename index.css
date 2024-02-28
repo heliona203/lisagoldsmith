@@ -7,10 +7,10 @@ body {
 }
 #container {
   --button-width: 20vw;
-  --page-width: calc(100vw - var(--button-width) - 10vw);
+  --page-width: calc(100vw - var(--button-width) - 6vw);
   /* display: grid; */
-  /* grid-template-columns: calc(var(--page-width) + 10vw) var(--button-width) var(--button-width) calc(var(--page-width) + 10vw); */
-  width: calc(2 * 10vw + 2 * var(--page-width) + 2 * var(--button-width));
+  /* grid-template-columns: calc(var(--page-width) + 6vw) var(--button-width) var(--button-width) calc(var(--page-width) + 6vw); */
+  width: calc(2 * 6vw + 2 * var(--page-width) + 2 * var(--button-width));
   display: flex;
   align-self: flex-start;
   transition: transform 1s ease;
@@ -20,16 +20,16 @@ body {
 }
 .subcontainer{
   --button-width: 20vw;
-  --page-width: calc(100vw - var(--button-width) - 10vw);
-  width: calc(10vw + var(--page-width) + var(--button-width));
+  --page-width: calc(100vw - var(--button-width) - 6vw);
+  width: calc(6vw + var(--page-width) + var(--button-width));
   /* float: left; */
   display: flex;
   align-self: flex-start;
-  padding-bottom: 10vw;
+  padding-bottom: 10vh;
 }
 .page {
   --button-width: 20vw;
-  width: calc(100vw - var(--button-width) - 10vw);
+  width: calc(100vw - var(--button-width) - 6vw);
   /* padding-right: 20vw; */
   /* margin-right: 384px; */
   display: flex;
@@ -39,42 +39,44 @@ body {
   align-items: flex-start;
   flex-direction: column;
   /* border: 1px solid black; */
+  padding-top: 3vh;
 }
 #homepage {
-  margin-left: 10vw;
+  margin-left: 6vw;
+  padding-right: 5vw;
 }
 .section {
-  margin-top: 10vw;
+  margin-top: 50px;
 }
 .title {
-  font-size: 3em;
+  font-size: 2.5rem;
 }
 .subtitle {
-  font-size: 1.25em;
+  font-size: 1.5rem;
   align-self: flex-start;
-  margin-top: 2vw;
+  margin-top: 22px;
 }
 .heading {
-  font-size: 1.5em;
-  margin-top: 6vw;
+  font-size: 1.25rem;
+  margin-top: 50px;
 }
 .body-text {
-  margin-top: 2vw;
+  margin-top: 22px;
   color: var(--dl-color-gray-black);
-  font-size: 14px;
-  line-height: 2.25;
+  font-size: 1rem;
+  line-height: 2;
 }
 .subheading {
-  margin-top: 2vw;
+  margin-top: 22px;
 }
 #pricing {
   top: 0px;
   right: 0px;
-  height: calc(10vw + 100%);
+  height: calc(10vh + 100%);
   /* position: fixed; */
   width: 20vw;
   opacity: 0.5;
-  background-image: linear-gradient(to right, white ,#FFEAEE );
+  background-image: linear-gradient(to right, white ,#B4DCE4);
   /* border: 1px solid black; */
   /* bottom: 0px; */
   /* margin: auto; */
@@ -82,18 +84,18 @@ body {
   cursor:pointer;
 }
 #pricing:hover {
-  background-image: linear-gradient(to right, white ,#FFC2CD ); /* A more intense pink */
+  background-image: linear-gradient(to right, white ,#358597); /* A more intense pink */
   /* transform: translateY(-5px); "Raise" the button */
 }
 #back {
   top: 0px;
   right: 0px;
-  height: calc(10vw + 100%);
+  height: calc(10vh + 100%);
   /* position: fixed; */
   width: 20vw;
   /*  */
   /* opacity: 0.5; */
-  background-image: linear-gradient(to left, white ,#FFEAEE );
+  background-image: linear-gradient(to left, white ,#B4DCE4);
   /* border: 1px solid black; */
   /* bottom: 0px; */
   /* margin: auto; */
@@ -101,7 +103,7 @@ body {
   cursor:pointer;
 }
 #back:hover {
-  background-image: linear-gradient(to left, white ,#FFC2CD ); /* A more intense pink */
+  background-image: linear-gradient(to left, white ,#358597); /* A more intense pink */
   /* transform: translateY(-5px); "Raise" the button */
 }
 .button-text {
@@ -134,7 +136,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 .section2 {
-  margin-top: 6vw;
+  margin-top: 6vh;
 }
 #contact {
   height: 50px;
@@ -190,14 +192,14 @@ b {
   position: relative;
   /* margin-top: 1vw; */
   width: 100%;
-  height: 20vw;
+  height: 20vh;
   /* border: 1px solid gray; */
   overflow: hidden;
-  margin-top: 2vw;
+  margin-top: 2vh;
 }
 #shorter{
   width: 100%;
-  margin-top: 2vw;
+  margin-top: 2vh;
 }
 .media-type.show {
   height: auto;
@@ -238,5 +240,5 @@ b {
   content: attr(data-less)
 }
 .jobs{
-  margin-top: 1vw;
+  margin-top: 1vh;
 }
