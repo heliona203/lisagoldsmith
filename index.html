@@ -289,13 +289,15 @@
                 <span class="readmore" data-more="Show more..." data-less="Show less..."></span>
                 <span class="readmore-gradient"></span>
               </div>
-              <div id="shorter">
+              <div class="media-type">
                 <h4 class="subheading">DOCUMENTARIES – (Set Decorator)</h4>
                 <div class="jobs">
                   American Idol/Country- 2015- Arclight Prods.<br>
                   Helmet Newton Retrospective - 2014 Arclight Prods.<br>
                   Reflection in Fashion – 2011 – Arclight Prods.
                 </div>
+                <span class="readmore" data-more="Show more..." data-less="Show less..."></span>
+                <span class="readmore-gradient"></span>
               </div>
               <h1 class="heading">BACKGROUND</h1>
               <p class="body-text">UCLA-Interior Design Programs-1999. Local 44, 52, SDSA, BAFTA.</p>
@@ -425,9 +427,17 @@
       }
     }
     document.querySelectorAll('.readmore').forEach( function(link) {
+      // link is simply a variable name used to represent each individual .readmore element
       link.addEventListener('click', function() {
         this.closest('.media-type').classList.toggle('show');
       });
+    });
+    document.querySelectorAll('.media-type').forEach( function(element) {
+      if (element.offsetHeight + 5 > element.scrollHeight) {
+        element.querySelector('.readmore').style.display = 'none';
+        element.querySelector('.readmore-gradient').style.display = 'none';
+        element.style.height = 'auto';
+      }
     });
     </script>
 </html>
